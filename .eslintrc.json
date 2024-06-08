@@ -1,3 +1,76 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "plugins": ["eslint-comments"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "eslint:recommended",
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "class-methods-use-this": "off",
+        "eslint-comments/no-unused-disable": "error",
+        "import/order": [
+          "error",
+          {
+            "newlines-between": "never",
+            "alphabetize": {
+              "order": "asc",
+              "orderImportKind": "asc"
+            }
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 120
+          }
+        ],
+        "no-multi-str": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/require-default-props": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["tsconfig.?*.json"]
+      },
+      "extends": ["plugin:@typescript-eslint/recommended", "airbnb-typescript"],
+      "rules": {
+        "@typescript-eslint/consistent-type-exports": "warn",
+        "@typescript-eslint/consistent-type-imports": "warn",
+        "@typescript-eslint/dot-notation": [
+          "error",
+          {
+            "allowIndexSignaturePropertyAccess": true
+          }
+        ],
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowTaggedTemplates": true
+          }
+        ],
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": [
+        "*.stories.ts",
+        "*.stories.tsx",
+        "*.stories.js",
+        "*.stories.jsx"
+      ],
+      "rules": {
+        "react/jsx-props-no-spreading": "off"
+      }
+    }
+  ],
+  "extends": ["plugin:storybook/recommended"]
 }

@@ -30,3 +30,4 @@ Open [http://localhost:3000](http://localhost:3000)
 - husky
 - swc-loader
 - vite
+- storybook
