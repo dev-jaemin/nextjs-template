@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Nextjs Template
 
-## Getting Started
+Next.js 기반 템플릿입니다.
+프로젝트를 시작할 때 boiler plate로 사용하기 위해 제작되었습니다.
+이 프로젝트에서 채택한 라이브러리는 (유사 라이브러리 대비) 개인적으로 좋다고 생각하는 것들입니다.
 
-First, run the development server:
+이 프로젝트는 yarn v4에 맞추어져 있습니다.
+yarn 이외의 패키지 매니저 사용시 pnp 사용하실 수 없습니다.
 
 ```bash
-npm run dev
-# or
+# for run
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+eslint rule은 순도 100% 제 취향이지만 아마 여러분들의 취향도 저격할 것입니다.
+개인적인 경험으로, rule은 약하게 짜면 나중에 후회하게 되더라구요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 적용 라이브러리(추가 예정)
 
-## Learn More
+- @vanilla-extract/css
+  - zero-runtime CSS in JS 로 런타임 성능 확보
+- @tanstack/react-query(v5)
+- react-hook-form
+- js-cookie
 
-To learn more about Next.js, take a look at the following resources:
+## 적용 라이브러리(devDependencies)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- husky
+- swc-loader
+- vite
